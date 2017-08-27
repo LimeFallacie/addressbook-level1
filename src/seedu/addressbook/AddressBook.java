@@ -133,6 +133,9 @@ public class AddressBook {
     private static final String COMMAND_EXIT_DESC = "Exits the program.";
     private static final String COMMAND_EXIT_EXAMPLE = COMMAND_EXIT_WORD;
 
+    private static final String COMMAND_EDIT_WORD = "edit";
+    private static final String COMMAND_EDIT_DESC = "Edits the details of a person identified by the index number"; //INCOMPLETE
+
     private static final String DIVIDER = "===================================================";
 
 
