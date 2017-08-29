@@ -389,6 +389,9 @@ public class AddressBook {
             return getUsageInfoForAllCommands();
         case COMMAND_EXIT_WORD:
             executeExitProgramRequest();
+        case COMMAND_SORT_WORD:
+            executeSort();
+            return executeListAllPersonsInAddressBook();
         default:
             return getMessageForInvalidCommandInput(commandType, getUsageInfoForAllCommands());
         }
@@ -834,6 +837,9 @@ public class AddressBook {
         ALL_PERSONS.addAll(persons);
     }
 
+    private static void executeSort(){
+        ALL_PERSONS.sort((Person1, Person2) -> Person1.get(PersonProperty.NAME).compareTo(Person2.get(PersonProperty.NAME)));
+    }
 
     /*
      * ===========================================
